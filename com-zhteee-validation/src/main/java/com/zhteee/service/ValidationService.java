@@ -50,6 +50,7 @@ public class ValidationService {
 			return false;
 		}
 	}
+
 	/**
 	 *刷新JWT
 	 */
@@ -71,6 +72,7 @@ public class ValidationService {
 		}
 		return newJwt;	
 	}
+
 	/**
 	 *生成新JWT
 	 */
@@ -85,6 +87,7 @@ public class ValidationService {
 		}
 		return newJwt;	
 	}
+
 	/**
 	 *注销jwt，实际为向redis中写入jwt对应key
 	 */

@@ -10,6 +10,4 @@ public interface AdminDao {
 
 	Map<String, Object> login(Admin admin);
 
-	Map<String, Object> valiPwd(Admin admin);
-
 }

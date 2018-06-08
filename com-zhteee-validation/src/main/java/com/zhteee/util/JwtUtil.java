@@ -49,8 +49,8 @@ public class JwtUtil {
         return builder.compact();
     }
 
-    // 解密jwt
-    public   Claims parseJWT(String jwt, String JWT_SECRET) throws Exception{
+    // 解密jwt 返回装载数据
+    public Claims parseJWT(String jwt, String JWT_SECRET) throws Exception{
         SecretKey key = generalKey(JWT_SECRET);
         Claims claims = Jwts.parser()         
            .setSigningKey(key)

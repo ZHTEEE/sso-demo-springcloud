@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
 
+	//测试访问
 	@RequestMapping("/")
 	@ResponseBody
 	public String index (){

@@ -112,4 +112,5 @@ public class JedisPoolUtil extends CachingConfigurerSupport{
 		}
 		
 	}
+
 }

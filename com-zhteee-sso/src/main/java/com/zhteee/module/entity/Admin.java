@@ -1,6 +1,5 @@
 package com.zhteee.module.entity;
 
-import org.springframework.stereotype.Repository;
 
 
 public class Admin {

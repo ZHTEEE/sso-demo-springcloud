@@ -11,7 +11,12 @@ import java.util.Map;
 @Component
 @FeignClient(name= "validation")
 public interface ValidationService {
-	
+
+	/**
+	 * 访问验证中心
+	 */
+
+
 	 @RequestMapping(value = "/vali/logIn",method = RequestMethod.POST)
 	 String signin(@RequestParam(value = "getJson") Map<String, Object> map);
 

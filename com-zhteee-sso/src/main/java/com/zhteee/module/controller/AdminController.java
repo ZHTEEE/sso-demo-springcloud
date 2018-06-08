@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/sso")
 public class AdminController {
 
 
@@ -33,7 +33,7 @@ public class AdminController {
 	@Autowired
 	private ValidationService validationService;
 	
-	//管理员登录
+	//登录
 	@ResponseBody
     @RequestMapping(value="/login",method=RequestMethod.POST)
 	public Map<String,Object> login(@RequestParam Map<String,Object>  getJson) throws IOException{
@@ -76,18 +76,4 @@ public class AdminController {
 		return map;
 	}
 
-	//管理员修改密码验证
-	@ResponseBody
-	@RequestMapping(value="/valipwd",method=RequestMethod.POST)
-	public Map<String,Object> valipwd(@RequestParam Map<String,Object>  getJson) throws IOException{
-		Map<String,Object> map = new HashMap<>();
-		JSONObject jsonObject = JSONObject.fromObject(getJson);
-		Admin admin = (Admin)JSONObject.toBean(jsonObject, Admin.class);
-		if(adminService.valipwd(admin)!=null){
-			map.put("code", "200");
-		}else{
-			map.put("code", "300");
-		}
-		return map;
-	}
 }

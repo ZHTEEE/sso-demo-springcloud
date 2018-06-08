@@ -12,9 +12,7 @@ import java.util.Map;
 @FeignClient(name= "validation")
 public interface ValidationService {
 
-	 @RequestMapping(value = "/vali/logOut",method = RequestMethod.POST)
-	 Map<String,Object> logOut(@RequestParam(value = "jwt") String jwt);
-
+	//访问验证中心
 	 @RequestMapping(value = "/vali/vali",method = RequestMethod.POST)
 	 String vali(@RequestParam(value = "jjwt") String jwt);
 

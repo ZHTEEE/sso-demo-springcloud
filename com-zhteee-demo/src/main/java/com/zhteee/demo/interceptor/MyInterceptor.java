@@ -55,7 +55,9 @@ public class MyInterceptor implements HandlerInterceptor{
 
 		
 	}
-
+	/**
+	 *添加拦截返回信息
+	 */
 	private void unPass(HttpServletResponse response) throws IOException {
 		Map<String,Object> map = new HashMap<>();
 		map.put("code", 999);

@@ -9,8 +9,4 @@
 		SELECT id , name FROM admin WHERE login_name = #{loginName} AND login_pwd = #{loginPwd}
 	</select>
 
-	<select id="valiPwd" resultType="java.util.Map" >
-		SELECT id AS id FROM admin WHERE login_name = #{loginName} AND login_pwd = #{loginPwd}
-	</select>
-
 </mapper>

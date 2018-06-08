@@ -19,13 +19,5 @@ public class AdminService {
 	public Map<String,Object> login(Admin admin){
 		return  adminDao.login(admin);
 	}
-	
-	public Map<String,Object> valipwd(Admin admin){
-		Map<String,Object> map = adminDao.valiPwd(admin);
-		if(map!=null){
-			return map; 
-		}
-		return null; 
-	}
 
 }
