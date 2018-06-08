@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--<mapper namespace="com.zhteee.module.dao.AdminDao">-->
+<mapper namespace="com.zhteee.module.dao.AdminDao">
+
+	<select id="login" resultType="java.util.Map" parameterType="com.zhteee.module.entity.Admin" >
+		SELECT id , name FROM admin WHERE login_name = #{loginName} AND login_pwd = #{loginPwd}
+	</select>
+
+	<select id="valiPwd" resultType="java.util.Map" >
+		SELECT id AS id FROM admin WHERE login_name = #{loginName} AND login_pwd = #{loginPwd}
+	</select>
+
+</mapper>
